@@ -1,8 +1,11 @@
+import TodoItem from "./TodoItem";
+
 const TodoList = () => {
   return (
     <ul>
-      <li>List one</li>
-      <li>List two</li>
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
     </ul>
   );
 };
