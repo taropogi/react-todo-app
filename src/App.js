@@ -1,11 +1,16 @@
 import "./App.css";
-
+import TheHeader from "./components/TheHeader";
 import TodoList from "./components/TodoList";
 
 function App() {
   return (
-    <div>
-      <TodoList />
+    <div className="container">
+      <div className="app-wrapper">
+        <div>
+          <TheHeader />
+        </div>
+      </div>
+      {/* <TodoList /> */}
     </div>
   );
 }
