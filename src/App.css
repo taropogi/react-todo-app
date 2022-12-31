@@ -5,7 +5,8 @@
 }
 
 .container {
-  background: linear-gradient(to right bottom, #e1b382, #c89666);
+  /* background: linear-gradient(to right bottom, #00ff00, #ff0000); */
+  /* background-image: "bg-todo.jpg"; */
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -22,6 +23,8 @@
   border-radius: 10px;
   box-shadow: 3px 6px 40px #000;
   margin-bottom: 10px;
+  opacity: 0.9;
+  border: solid white 2px;
 }
 
 .header h1 {
