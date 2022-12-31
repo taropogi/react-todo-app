@@ -8,16 +8,15 @@ const App = () => {
   const [todos, setTodos] = useState([]);
   const onSubmitTodoHandler = (todo) => {
     setTodos((prevState) => {
-      return [
-        ...prevState,
-        {
-          id: Math.random(),
-          title: todo,
-        },
-      ];
+      const currentTodos = [...prevState];
+      currentTodos.unshift({
+        id: Math.random(),
+        title: todo,
+      });
+      return currentTodos;
     });
 
-    console.log(todos);
+    // console.log(todos);
   };
   return (
     <div className="container">

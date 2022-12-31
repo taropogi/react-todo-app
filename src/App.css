@@ -67,13 +67,23 @@
   border: none;
   outline: none;
   cursor: pointer;
+  color: red;
   background-color: transparent;
+  padding: 2px;
+  margin: 2px;
   font-size: 28px;
-  border-radius: 50%;
+}
+
+.button-edit {
+  color: yellow;
+}
+
+.button-complete {
+  color: greenyellow;
 }
 
 .button-delete {
-  color: lightseagreen;
+  color: red;
 }
 
 .complete {

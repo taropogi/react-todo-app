@@ -8,6 +8,7 @@ const TheForm = (props) => {
   const onFormSubmit = (event) => {
     event.preventDefault();
     props.onSubmitTodo(enteredTodo);
+    setEnteredTodo("");
   };
   return (
     <form onSubmit={onFormSubmit}>
