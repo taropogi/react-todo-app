@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-todo-app/static/css/main.5c5493d2.css",
-    "main.js": "/react-todo-app/static/js/main.a763b15d.js",
+    "main.js": "/react-todo-app/static/js/main.b3d2d5ef.js",
     "index.html": "/react-todo-app/index.html",
     "main.5c5493d2.css.map": "/react-todo-app/static/css/main.5c5493d2.css.map",
-    "main.a763b15d.js.map": "/react-todo-app/static/js/main.a763b15d.js.map"
+    "main.b3d2d5ef.js.map": "/react-todo-app/static/js/main.b3d2d5ef.js.map"
   },
   "entrypoints": [
     "static/css/main.5c5493d2.css",
-    "static/js/main.a763b15d.js"
+    "static/js/main.b3d2d5ef.js"
   ]
 }
