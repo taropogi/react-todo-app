@@ -30,7 +30,13 @@
 .header h1 {
   color: #fff;
   text-align: center;
-  margin: 30px 0;
+  margin: 20px 0;
+}
+
+.header p {
+  color: #fff;
+  text-align: center;
+  margin: 10px 0;
 }
 
 .task-input {
