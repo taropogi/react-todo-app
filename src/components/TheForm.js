@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
-const TheForm = () => {
+const TheForm = (props) => {
+  const [enteredTodo, setEnteredTodo] = useState("");
+  const onTodoChange = (event) => {
+    setEnteredTodo(event.target.value);
+  };
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+    props.onSubmitTodo(enteredTodo);
+  };
   return (
-    <form>
-      <input type="text" placeholder="Enter a todo" className="task-input" />
+    <form onSubmit={onFormSubmit}>
+      <input
+        value={enteredTodo}
+        required
+        type="text"
+        placeholder="Enter a todo"
+        className="task-input"
+        onChange={onTodoChange}
+      />
       <button className="button-add" type="submit">
         Add
       </button>
