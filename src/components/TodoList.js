@@ -9,6 +9,7 @@ const TodoList = (props) => {
             todo={todo}
             key={todo.id}
             onDeleteTodo={props.onDeleteTodo}
+            onCompleteTodo={props.onCompleteTodo}
           />
         ))}
       </ul>

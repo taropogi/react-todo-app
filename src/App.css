@@ -100,6 +100,7 @@
   text-decoration-line: line-through;
   text-decoration-color: #ff6c6c;
   opacity: 0.6;
+  border: solid 2px greenyellow;
 }
 
 .list {

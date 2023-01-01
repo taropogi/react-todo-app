@@ -1,21 +1,29 @@
 const TodoItem = (props) => {
+  const todo = props.todo;
   const todoOnChangeHandler = (e) => {
     e.preventDefault();
   };
 
+  const completeHandler = () => {
+    props.onCompleteTodo(todo);
+  };
   const deleteHandler = () => {
-    props.onDeleteTodo(props.todo);
+    props.onDeleteTodo(todo);
   };
   return (
-    <li className="list-item">
+    <li className={"list-item " + (todo.completed ? "complete" : "")}>
       <input
         type="text"
-        value={props.todo.title}
+        value={todo.title}
         className="list"
         onChange={todoOnChangeHandler}
       />
+
       <div>
-        <button className="button-complete task-button">
+        <button
+          className="button-complete task-button"
+          onClick={completeHandler}
+        >
           <i className="fa fa-check-circle"></i>
         </button>
         <button className="button-edit task-button">

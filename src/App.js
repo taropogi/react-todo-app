@@ -23,6 +23,21 @@ const App = () => {
   const deleteTodoHandler = (delTodo) => {
     setTodos(todos.filter((todo) => todo.id !== delTodo.id));
   };
+  const completeTodoHandler = (completeTodo) => {
+    setTodos((prevState) => {
+      const currentTodos = prevState;
+
+      return currentTodos.map((item) => {
+        if (item.id === completeTodo.id) {
+          return { ...item, completed: !item.completed };
+        } else {
+          return item;
+        }
+      });
+    });
+
+    // console.log("completed", todos);
+  };
   return (
     <div className="container">
       <div className="app-wrapper">
@@ -33,7 +48,11 @@ const App = () => {
           <TheForm onSubmitTodo={onSubmitTodoHandler} />
         </div>
         <div>
-          <TodoList todos={todos} onDeleteTodo={deleteTodoHandler} />
+          <TodoList
+            todos={todos}
+            onDeleteTodo={deleteTodoHandler}
+            onCompleteTodo={completeTodoHandler}
+          />
         </div>
       </div>
     </div>
