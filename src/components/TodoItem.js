@@ -2,6 +2,10 @@ const TodoItem = (props) => {
   const todoOnChangeHandler = (e) => {
     e.preventDefault();
   };
+
+  const deleteHandler = () => {
+    props.onDeleteTodo(props.todo);
+  };
   return (
     <li className="list-item">
       <input
@@ -15,11 +19,9 @@ const TodoItem = (props) => {
           <i className="fa fa-check-circle"></i>
         </button>
         <button className="button-edit task-button">
-          {" "}
           <i className="fa fa-edit"></i>
         </button>
-        <button className="button-delete task-button">
-          {" "}
+        <button className="button-delete task-button" onClick={deleteHandler}>
           <i className="fa fa-trash"></i>
         </button>
       </div>

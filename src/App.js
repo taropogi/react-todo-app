@@ -12,11 +12,16 @@ const App = () => {
       currentTodos.unshift({
         id: Math.random(),
         title: todo,
+        completed: false,
       });
       return currentTodos;
     });
 
     // console.log(todos);
+  };
+
+  const deleteTodoHandler = (delTodo) => {
+    setTodos(todos.filter((todo) => todo.id !== delTodo.id));
   };
   return (
     <div className="container">
@@ -28,7 +33,7 @@ const App = () => {
           <TheForm onSubmitTodo={onSubmitTodoHandler} />
         </div>
         <div>
-          <TodoList todos={todos} />
+          <TodoList todos={todos} onDeleteTodo={deleteTodoHandler} />
         </div>
       </div>
     </div>
