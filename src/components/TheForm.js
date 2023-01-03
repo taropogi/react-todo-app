@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 
 const TheForm = (props) => {
-  const [enteredTodo, setEnteredTodo] = useState("");
   const onTodoChange = (event) => {
-    setEnteredTodo(event.target.value);
+    props.onChangeTodo(event.target.value);
   };
   const onFormSubmit = (event) => {
     event.preventDefault();
-    props.onSubmitTodo(enteredTodo);
-    setEnteredTodo("");
+    props.onSubmitTodo(props.enteredTodo);
+    // setEnteredTodo("");
   };
+
   return (
     <form onSubmit={onFormSubmit}>
       <input
-        value={enteredTodo}
+        value={props.enteredTodo}
         required
         type="text"
         placeholder="Enter a todo"
@@ -21,7 +21,7 @@ const TheForm = (props) => {
         onChange={onTodoChange}
       />
       <button className="button-add" type="submit">
-        Add
+        {props.editTodo ? "Save" : "Add"}
       </button>
     </form>
   );

@@ -10,6 +10,10 @@ const TodoItem = (props) => {
   const deleteHandler = () => {
     props.onDeleteTodo(todo);
   };
+
+  const editHandler = () => {
+    props.onEditTodo(todo);
+  };
   return (
     <li className={"list-item " + (todo.completed ? "complete" : "")}>
       <input
@@ -26,7 +30,7 @@ const TodoItem = (props) => {
         >
           <i className="fa fa-check-circle"></i>
         </button>
-        <button className="button-edit task-button">
+        <button className="button-edit task-button" onClick={editHandler}>
           <i className="fa fa-edit"></i>
         </button>
         <button className="button-delete task-button" onClick={deleteHandler}>
