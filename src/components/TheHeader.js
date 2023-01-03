@@ -3,7 +3,7 @@ import React from "react";
 const TheHeader = () => {
   return (
     <div className="header">
-      <h1>Todo Lists</h1>
+      <h1>TODO LIST</h1>
       <p>by: Richard Bernisca</p>
     </div>
   );

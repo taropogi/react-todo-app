@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const TheForm = (props) => {
   const onTodoChange = (event) => {
@@ -21,7 +21,7 @@ const TheForm = (props) => {
         onChange={onTodoChange}
       />
       <button className="button-add" type="submit">
-        {props.editTodo ? "Save" : "Add"}
+        {props.editTodo ? "SAVE" : "ADD"}
       </button>
     </form>
   );
